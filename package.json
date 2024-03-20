@@ -1,0 +1,24 @@
+{
+  "name": "bigfile_upload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/12345yua/bigFile_upload_demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/12345yua/bigFile_upload_demo/issues"
+  },
+  "homepage": "https://github.com/12345yua/bigFile_upload_demo#readme",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "blueimp-md5": "^2.19.0"
+  }
+}
