@@ -112,13 +112,13 @@
             function sliceFileAndUpload(file, chunkSize){
                 var filePartList = [];
                 var blobSlice = File.prototype.slice || File.prototype.mozSlice || File.prototype.webkitSlice;
-                var chunkCount = Math.ceil(file.size / chunkSize);  //分片数量
+                var chunkCount = Math.ceil(file.size / chunkSize);  //数量
                 document.getElementById("sliceSize").innerHTML = chunkSize;
                 document.getElementById("sliceCount").innerHTML = chunkCount;
-                var currentChunk = 0;   //当前索引
+                var currentChunk = 0;   //索引
                 var spark = new SparkMD5.ArrayBuffer();
                 var fileReader = new FileReader();
-                fileReader.onload = e => {  //FileReader.onload 回调函数会在每次读区完成后触发
+                fileReader.onload = e => {  
                     spark.append(e.target.result);
                     currentChunk++;
                     if(currentChunk < chunkCount){
@@ -158,8 +158,8 @@
                     var filePart = blobSlice.call(file, start, end);    //分隔文件
                     temp.currentIndex = start;
                     temp.filePart = filePart;
-                    filePartList.push(temp);    //将分片文件加入到分片文件列表中
-                    fileReader.readAsArrayBuffer(filePart); //将分片文件使用FileReader读取
+                    filePartList.push(temp);    
+                    fileReader.readAsArrayBuffer(filePart); 
                 }
 
                 loadNext();
